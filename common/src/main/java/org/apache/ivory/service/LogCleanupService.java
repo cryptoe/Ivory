@@ -26,7 +26,6 @@ import javax.servlet.jsp.el.ExpressionEvaluator;
 
 import org.apache.commons.el.ExpressionEvaluatorImpl;
 import org.apache.ivory.IvoryException;
-import org.apache.ivory.aspect.GenericAlert;
 import org.apache.ivory.cleanup.AbstractCleanupHandler;
 import org.apache.ivory.cleanup.FeedCleanupHandler;
 import org.apache.ivory.cleanup.ProcessCleanupHandler;
@@ -66,8 +65,8 @@ public class LogCleanupService implements IvoryService {
 				feedCleanupHandler.cleanup();
 			} catch (Throwable t) {
 				LOG.error("Error in cleanup task: ", t);
-				GenericAlert.alertLogCleanupServiceFailed(
-						"Exception in log cleanup service", t);
+				//GenericAlert.alertLogCleanupServiceFailed(
+					//	"Exception in log cleanup service", t);
 			}
 		}
 	}
